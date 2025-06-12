@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart To-Do App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📋 My To-Do List</h1>
+
+    <div class="controls">
+      <input type="text" id="taskInput" placeholder="Enter your task..." />
+      <select id="priority">
+        <option value="low">🟢 Low</option>
+        <option value="medium">🟡 Medium</option>
+        <option value="high">🔴 High</option>
+      </select>
+      <input type="datetime-local" id="dueDate" />
+      <button onclick="addTask()">➕ Add Task</button>
+    </div>
+
+    <div class="toggles">
+      <button onclick="toggleDarkMode()">🌓 Dark Mode</button>
+    </div>
+
+    <ul id="taskList"></ul>
+
+    <div class="progress-container">
+      <label>Progress:</label>
+      <div class="progress-bar" id="progressBar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+    </div>
+
+    <div id="quoteBox" class="quote"></div>
+  </div>
+
+  <audio id="alertSound" src="https://assets.mixkit.co/sfx/preview/mixkit-positive-interface-beep-221.wav"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
